@@ -1,0 +1,191 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Gloabl Variables */
+:root {
+  --main-pink-color: #e02f6b;
+  --blue-color: #0000ff;
+  --dark-blue-color: #18293c;
+  --orange-color: #ffa500;
+  --green-yellow-color: #cddc39;
+  --light-pink-color: #efa2b4;
+  --light-cyan-color: #aef1ee;
+  --white-alpha-color-40: rgba(255, 255, 255, 0.4);
+  --white-alpha-color-25: rgba(255, 255, 255, 0.25);
+  --blur-5: blur(5px);
+}
+
+/* Global Settings */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* Scrollbar Settings */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--light-cyan-color);
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right bottom, #65045f, #980876);
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--light-pink-color),
+    var(--light-cyan-color)
+  );
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: var(--dark-blue-color);
+  padding: 5vh 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--green-yellow-color);
+  z-index: -1;
+  opacity: 0.12;
+  /* filter: var(--blur-5); */
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* Utility Classes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  /* background-color: #0000ff; */
+  padding: 0 40px;
+}
+.home-section {
+  display: flex;
+  padding: 120px 0;
+  /* background-color: #18293c; */
+}
+
+section {
+  background-color: var(--white-alpha-color-25);
+  border: 1px solid var(--white-alpha-color-40);
+  min-height: 90vh;
+  border-radius: 30px;
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+}
+.home-text,
+.home-img {
+  width: 50%;
+  padding: 15px;
+}
+
+.home-img .imgbox {
+  width: 400px;
+  border-radius: 50%;
+  background-color: var(--white-alpha-color-25);
+  border: 8px solid var(--white-alpha-color-25);
+}
+.home-img .imgbox img {
+  border-radius: 50%;
+}
+
+.home-text p {
+  font-size: 18px;
+}
+.home-text h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.home-text h2 {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin: 0 0 30px;
+}
+.btn {
+  position: relative;
+  line-height: 1.5;
+  display: inline-block;
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  border: 1px solid var(--white-alpha-color-40);
+  background-color: var(--white-alpha-color-25);
+  color: var(--main-pink-color);;
+  border-radius: 30px;
+  user-select: none;
+  vertical-align: middle;
+  font-family: inherit;
+  cursor: pointer;
+  overflow: hidden;
+  vertical-align: middle;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-pink-color);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: #fff;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-text .btn {
+  margin: 0 15px 15px 0;
+}
