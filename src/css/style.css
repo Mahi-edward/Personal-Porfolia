@@ -137,6 +137,10 @@ img {
   height: 2px;
   background-color: var(--main-pink-color);
   position: relative;
+  transition:   background-color 0.3s ease;
+}
+.header.active .nav-toggler span{
+  background-color: transparent;
 }
 .header .nav-toggler span::before,
 .header .nav-toggler span::after {
@@ -148,6 +152,12 @@ img {
   background-color: var(--main-pink-color);
   transition: all 0.3s ease;
 }
+.header.active .nav-toggler span::before{
+  transform: rotate(45deg);
+}
+.header.active .nav-toggler span::after{
+  transform: rotate(-45deg);
+}
 .header .nav-toggler span::before {
   left: 0;
   transform: translateY(-8px);
@@ -157,8 +167,8 @@ img {
   transform: translateY(8px);
 }
 
-.header .nav-toggler:hover span::before,
-.header .nav-toggler:hover span::after {
+.header:not(.active) .nav-toggler:hover span::before,
+.header:not(.active) .nav-toggler:hover span::after {
   width: 50%;
 }
 
