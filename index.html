@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="./src/css/style.css" />
-    <script src="./src/js/index.js"></script>
   </head>
   <body>
     <main class="main">
-      <section class="home-section align-items-center">
+      <!-- Home Section Start -->
+      <section class="home-section align-items-center hidden">
         <div class="container">
           <div class="row align-items-center">
             <div class="home-text">
@@ -28,6 +28,165 @@
           </div>
         </div>
       </section>
+      <!-- Home Section End -->
+
+      <!-- About Section Start -->
+
+      <section class="about-section sec-padding">
+        <div class="container">
+          <div class="row">
+            <div class="section-title">
+              <h2>about me</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="about-img">
+              <div class="imgbox">
+                <img src="./assets/images/user.jpg" alt="user" />
+              </div>
+            </div>
+            <div class="about-text">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
+                doloribus voluptatum autem, dolore non eaque, illo id nihil
+                deleniti placeat repellendus, distinctio culpa provident
+                eligendi. Iure ipsam sit suscipit officia ad natus quia aliquid
+                quisquam! Maiores quod enim dignissimos, possimus quas
+                perferendis. Provident, numquam sint optio nihil quisquam
+                repudiandae dolorem maxime suscipit, molestiae ratione fuga
+              </p>
+              <h3>skills</h3>
+              <div class="skills">
+                <div class="skill-item">html</div>
+                <div class="skill-item">css</div>
+                <div class="skill-item">javascript</div>
+                <div class="skill-item">react</div>
+                <div class="skill-item">angular</div>
+                <div class="skill-item">mongo db</div>
+                <div class="skill-item">mysql</div>
+                <div class="skill-item">bootstrap</div>
+                <div class="skill-item">ant design</div>
+              </div>
+              <!-- tabs -->
+              <div class="about-tabs">
+                <button
+                  type="button"
+                  class="tab-item active"
+                  data-target="#education"
+                >
+                  education
+                </button>
+                <button
+                  type="button"
+                  class="tab-item"
+                  data-target="#experience"
+                >
+                  experience
+                </button>
+              </div>
+              <!-- Education Start -->
+              <div class="tab-content active" id="education">
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <span class="date">2013 - 2016</span>
+                    <h4>
+                      bachelor of technology -
+                      <span>madurai kamaraj university</span>
+                    </h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa non minus in veritatis ullam quod a sequi
+                      consequatur sint tempora ducimus magni amet, voluptas,
+                      perspiciatis nostrum blanditiis similique. Maxime, ullam!
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="date">2013 - 2016</span>
+                    <h4>
+                      bachelor of technology -
+                      <span>madurai kamaraj university</span>
+                    </h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa non minus in veritatis ullam quod a sequi
+                      consequatur sint tempora ducimus magni amet, voluptas,
+                      perspiciatis nostrum blanditiis similique. Maxime, ullam!
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="date">2013 - 2016</span>
+                    <h4>
+                      bachelor of technology -
+                      <span>madurai kamaraj university</span>
+                    </h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa non minus in veritatis ullam quod a sequi
+                      consequatur sint tempora ducimus magni amet, voluptas,
+                      perspiciatis nostrum blanditiis similique. Maxime, ullam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Education End -->
+
+              <!-- Experience Start -->
+              <div class="tab-content" id="experience">
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <span class="date">2022 - 2023</span>
+                    <h4>
+                      web developer -
+                      <span>openturf technology</span>
+                    </h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa non minus in veritatis ullam quod a sequi
+                      consequatur sint tempora ducimus magni amet, voluptas,
+                      perspiciatis nostrum blanditiis similique. Maxime, ullam!
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="date">2022 - 2023</span>
+                    <h4>
+                      web developer -
+                      <span>openturf technology</span>
+                    </h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa non minus in veritatis ullam quod a sequi
+                      consequatur sint tempora ducimus magni amet, voluptas,
+                      perspiciatis nostrum blanditiis similique. Maxime, ullam!
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="date">2022 - 2023</span>
+                    <h4>
+                      web developer -
+                      <span>openturf technology</span>
+                    </h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa non minus in veritatis ullam quod a sequi
+                      consequatur sint tempora ducimus magni amet, voluptas,
+                      perspiciatis nostrum blanditiis similique. Maxime, ullam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience End -->
+
+              <a href="#" class="btn">Download cv</a>
+              <a href="#" class="btn">contact me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section End -->
     </main>
+
+    <script src="./src/js/index.js"></script>
   </body>
 </html>

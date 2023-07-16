@@ -33,10 +33,10 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--light-cyan-color);
+  background-color: white;
 }
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(to right bottom, #65045f, #980876);
+background-color: var(--main-pink-color);
 }
 
 body {
@@ -92,6 +92,25 @@ img {
   align-items: center;
 }
 
+.hidden {
+  display: none !important;
+}
+.sec-padding {
+  padding: 80px 0;
+}
+
+.section-title {
+  /* background-color: red; */
+  width: 100%;
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
 .container {
   width: 100%;
   /* background-color: #0000ff; */
@@ -108,6 +127,7 @@ section {
   border: 1px solid var(--white-alpha-color-40);
   min-height: 90vh;
   border-radius: 30px;
+  backdrop-filter: var(--blur-5);
 }
 
 .main {
@@ -143,6 +163,12 @@ section {
   text-transform: capitalize;
   margin: 0 0 30px;
 }
+
+button {
+  font-family: inherit;
+  user-select: none;
+}
+
 .btn {
   position: relative;
   line-height: 1.5;
@@ -151,7 +177,7 @@ section {
   font-size: 0.9rem;
   border: 1px solid var(--white-alpha-color-40);
   background-color: var(--white-alpha-color-25);
-  color: var(--main-pink-color);;
+  color: var(--main-pink-color);
   border-radius: 30px;
   user-select: none;
   vertical-align: middle;
@@ -187,5 +213,150 @@ a {
 }
 
 .home-text .btn {
+  margin: 0 15px 15px 0;
+}
+
+.about-img {
+  width: 40%;
+  padding: 0 15px;
+}
+.about-text {
+  width: 60%;
+  /* background-color: yellow; */
+  padding: 0 15px;
+}
+.about-img .imgbox {
+  width: 380px;
+  background-color: var(--white-alpha-color-25);
+  border: 1px solid var(--white-alpha-color-40);
+  margin: auto;
+  border-radius: 10px;
+}
+.about-img .imgbox img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-text h3 {
+  text-transform: capitalize;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.about-text .skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-text .skill-item {
+  text-transform: capitalize;
+  background-color: var(--white-alpha-color-25);
+  border: 1px solid var(--white-alpha-color-40);
+  padding: 5px 15px;
+  margin: 0 15px 15px 0;
+  border-radius: 20px;
+  user-select: none;
+}
+
+.about-tabs {
+  margin-top: 20px;
+}
+.about-tabs .tab-item {
+  position: relative;
+  padding: 2px 0;
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  display: inline-block;
+  color: var(--dark-blue-color);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0 30px 0 0;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.about-tabs .tab-item:last-child {
+  margin: 0;
+}
+
+.about-tabs .tab-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--dark-blue-color);
+  transition: width 0.3s ease-in-out;
+}
+.about-tabs .tab-item:hover::before {
+  width: 100%;
+}
+.about-tabs .tab-item.active::before {
+  width: 100%;
+  background-color: var(--main-pink-color);
+}
+
+.about-tabs .tab-item.active {
+  color: var(--main-pink-color);
+  opacity: 1;
+  cursor: auto;
+}
+.about-text .tab-content {
+  padding: 40px 0;
+  display: none;
+}
+.about-text .tab-content.active {
+  display: block;
+}
+
+.about-text .timeline {
+  position: relative;
+}
+.about-text .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--main-pink-color);
+}
+
+.about-text .timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 10px 0 0 40px;
+}
+.about-text .timeline-item:last-child {
+  margin-bottom: 0px;
+}
+.about-text .timeline-item .date {
+  display: block;
+  color: var(--main-pink-color);
+  font-weight: 400;
+  margin: 0px 0 10px;
+}
+.about-text .timeline-item h4 {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 0px 0 10px;
+}
+.about-text .timeline-item h4 span {
+  font-weight: 400;
+}
+
+.about-text .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 11px;
+  height: 11px;
+  background-color: var(--main-pink-color);
+  border-radius: 50%;
+}
+.about-text .btn{
   margin: 0 15px 15px 0;
 }
