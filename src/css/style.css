@@ -28,6 +28,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* Scrollbar Settings */
 ::-webkit-scrollbar {
   width: 6px;
@@ -36,7 +40,7 @@
   background-color: white;
 }
 ::-webkit-scrollbar-thumb {
-background-color: var(--main-pink-color);
+  background-color: var(--main-pink-color);
 }
 
 body {
@@ -52,7 +56,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: var(--dark-blue-color);
-  padding: 5vh 0;
+  padding: 35px 0;
 }
 body::before {
   content: "";
@@ -91,12 +95,132 @@ img {
 .align-items-center {
   align-items: center;
 }
+.flex-end {
+  justify-content: flex-end;
+}
 
 .hidden {
   display: none !important;
 }
 .sec-padding {
   padding: 80px 0;
+}
+
+/* header */
+
+.header {
+  /* background: red; */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 20px 0 0;
+}
+
+.header .nav-toggler {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--white-alpha-color-25);
+  border: 1px solid var(--white-alpha-color-40);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin: 0px 15px;
+}
+.header .nav-toggler span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--main-pink-color);
+  position: relative;
+}
+.header .nav-toggler span::before,
+.header .nav-toggler span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-pink-color);
+  transition: all 0.3s ease;
+}
+.header .nav-toggler span::before {
+  left: 0;
+  transform: translateY(-8px);
+}
+.header .nav-toggler span::after {
+  right: 0;
+  transform: translateY(8px);
+}
+
+.header .nav-toggler:hover span::before,
+.header .nav-toggler:hover span::after {
+  width: 50%;
+}
+
+.header .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 35px 15px;
+  visibility: hidden;
+}
+.header.active .nav {
+  visibility: visible;
+}
+.header .nav-inner {
+  min-height: calc(100vh - 70px);
+  max-width: 1200px;
+  margin: auto;
+  background-color: var(--white-alpha-color-25);
+  border: 1px solid var(--white-alpha-color-40);
+  padding: 50px 0;
+  border-radius: 30px;
+  backdrop-filter: var(--blur-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition:all 0.5s ease;
+}
+.header.active .nav-inner {
+  opacity: 1;
+}
+
+.header .nav-inner ul li {
+  text-align: center;
+}
+.header .nav-inner ul li a {
+  position: relative;
+  display: block;
+  font-size: 40px;
+  text-transform: capitalize;
+  color: var(--dark-blue-color);
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+}
+.header .nav-inner ul li a:hover {
+  color: var(--main-pink-color);
+}
+.header .nav-inner ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 50%;
+  background-color: var(--white-alpha-color-25);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.header .nav-inner ul li a:hover::before {
+  width: 100%;
 }
 
 .section-title {
@@ -117,22 +241,57 @@ img {
   padding: 0 40px;
 }
 .home-section {
-  display: flex;
+  /* display: flex; */
   padding: 120px 0;
+  /* background-color: yellow; */
   /* background-color: #18293c; */
+}
+.home-section.active {
+  display: flex;
 }
 
 section {
   background-color: var(--white-alpha-color-25);
   border: 1px solid var(--white-alpha-color-40);
-  min-height: 90vh;
+  min-height: calc(100vh - 70px);
   border-radius: 30px;
   backdrop-filter: var(--blur-5);
+  display: none;
+  /* background-color: red; */
+}
+section.active {
+  display: block;
+  animation: fadeIn .5s ease-in-out forwards;
+}
+section.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Keyframes  */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .main {
   max-width: 1200px;
   margin: auto;
+  position: relative;
+}
+.main.fade-out {
+  opacity: 0;
 }
 .home-text,
 .home-img {
@@ -357,6 +516,6 @@ a {
   background-color: var(--main-pink-color);
   border-radius: 50%;
 }
-.about-text .btn{
+.about-text .btn {
   margin: 0 15px 15px 0;
 }
