@@ -6,31 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/all.css">
   </head>
   <body>
     <!-- Page Loader -->
-    <div class="page-loader">
+    <!-- <div class="page-loader">
       <div></div>
       <div></div>
       <div></div>
-    </div>
+    </div> -->
 
     <!-- Background Circles -->
-    <div class="bg-circles">
+    <!-- <div class="bg-circles">
       <div class="circle-1"></div>
       <div class="circle-2"></div>
       <div class="circle-3"></div>
       <div class="circle-4"></div>
-    </div>
+    </div> -->
 
     <!-- Overlay  prevent the multiple click in screen-->
 
-    <div class="overlay"></div>
+    <!-- <div class="overlay"></div> -->
 
-    <main class="main hidden">
+    <main class="main">
       <!-- Header Section Start -->
 
-      <header class="header">
+      <!-- <header class="header hidden">
         <div class="container">
           <div class="row flex-end">
             <button type="button" class="nav-toggler">
@@ -50,12 +51,12 @@
             </nav>
           </div>
         </div>
-      </header>
+      </header> -->
 
       <!-- Header Section End -->
 
       <!-- Home Section Start -->
-      <section class="home-section align-items-center" id="home">
+      <section class="home-section align-items-center hidden" id="home">
         <div class="container">
           <div class="row align-items-center">
             <div class="home-text">
@@ -78,7 +79,7 @@
 
       <!-- About Section Start -->
 
-      <section class="about-section sec-padding" id="about">
+      <section class="about-section sec-padding hidden" id="about">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -207,7 +208,225 @@
       </section>
 
       <!-- About Section End -->
+
+      <!-- Portfolio Section Start -->
+      <section class="portfolio-section sec-padding active">
+        <div class="container">
+          <div class="row">
+            <div class="section-title">
+              <h2>recent work</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Portfolio Item Start -->
+            <div class="portfolio-item">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  src="./assets/images/portfolio1.jpg"
+                  alt="portfolio item thumb"
+                />
+              </div>
+              <h3 class="portfolio-item-title">education course website</h3>
+              <button type="button" class="btn view-project-btn">
+                view project
+              </button>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusantium ea incidunt corrupti doloremque repellat saepe
+                    totam tempora fugit quaerat. Inventore magnam sed porro
+                    aspernatur sunt laboriosam. Recusandae a voluptates saepe
+                    labore, voluptatum eos cumque aut aspernatur vero.
+                    Reprehenderit, nostrum dignissimos.
+                  </p>
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>Created - <span>4 Dec 2022</span></li>
+                    <li>technology used - <span>Html,Css</span></li>
+                    <li>role - <span>Frontend</span></li>
+                    <li>
+                      View Online -
+                      <span
+                        ><a href="#" target="_blank">www.domain.com</a></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Item End -->
+
+            <!-- Portfolio Item Start -->
+            <div class="portfolio-item">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  src="./assets/images/portfolio2.jpg"
+                  alt="portfolio item thumb"
+                />
+              </div>
+              <h3 class="portfolio-item-title">Glassmorphism website</h3>
+              <button type="button" class="btn view-project-btn">
+                view project
+              </button>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusantium ea incidunt corrupti doloremque repellat saepe
+                    totam tempora fugit quaerat. Inventore magnam sed porro
+                    aspernatur sunt laboriosam. Recusandae a voluptates saepe
+                    labore, voluptatum eos cumque aut aspernatur vero.
+                    Reprehenderit, nostrum dignissimos.
+                  </p>
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>Created - <span>4 Dec 2022</span></li>
+                    <li>technology used - <span>Html,Css</span></li>
+                    <li>role - <span>Frontend</span></li>
+                    <li>
+                      View Online -
+                      <span
+                        ><a href="#" target="_blank">www.domain.com</a></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Item End -->
+
+            <!-- Portfolio Item Start -->
+            <div class="portfolio-item">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  src="./assets/images/portfolio3.jpg"
+                  alt="portfolio item thumb"
+                />
+              </div>
+              <h3 class="portfolio-item-title">AI Tech website</h3>
+              <button type="button" class="btn view-project-btn">
+                view project
+              </button>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusantium ea incidunt corrupti doloremque repellat saepe
+                    totam tempora fugit quaerat. Inventore magnam sed porro
+                    aspernatur sunt laboriosam. Recusandae a voluptates saepe
+                    labore, voluptatum eos cumque aut aspernatur vero.
+                    Reprehenderit, nostrum dignissimos.
+                  </p>
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>Created - <span>4 Dec 2022</span></li>
+                    <li>technology used - <span>Html,Css</span></li>
+                    <li>role - <span>Frontend</span></li>
+                    <li>
+                      View Online -
+                      <span
+                        ><a href="#" target="_blank">www.domain.com</a></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Item End -->
+
+            <!-- Portfolio Item Start -->
+            <div class="portfolio-item">
+              <div class="portfolio-item-thumbnail">
+                <img
+                  src="./assets/images/portfolio4.jpg"
+                  alt="portfolio item thumb"
+                />
+              </div>
+              <h3 class="portfolio-item-title">app course website</h3>
+              <button type="button" class="btn view-project-btn">
+                view project
+              </button>
+              <div class="portfolio-item-details">
+                <div class="description">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusantium ea incidunt corrupti doloremque repellat saepe
+                    totam tempora fugit quaerat. Inventore magnam sed porro
+                    aspernatur sunt laboriosam. Recusandae a voluptates saepe
+                    labore, voluptatum eos cumque aut aspernatur vero.
+                    Reprehenderit, nostrum dignissimos.
+                  </p>
+                </div>
+                <div class="general-info">
+                  <ul>
+                    <li>Created - <span>4 Dec 2022</span></li>
+                    <li>technology used - <span>Html,Css</span></li>
+                    <li>role - <span>Frontend</span></li>
+                    <li>
+                      View Online -
+                      <span
+                        ><a href="#" target="_blank">www.domain.com</a></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Item End -->
+          </div>
+        </div>
+      </section>
+      <!-- Portfolio Section End -->
+
+      <!-- Contact Start -->
+      <!-- Contact End -->
     </main>
+    <!-- Main End -->
+
+    <!-- Portfolio Item Details Popup Start  -->
+    <div class="portfolio-popup">
+      <div class="pp-inner">
+        <div class="pp-content">
+          <div class="pp-header">
+            <button class="btn pp-close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="pp-thumbnail">
+              <img src="./assets/images/portfolio3.jpg" alt="pp-thumbnail" />
+            </div>
+            <h3></h3>
+            <!-- <h3>app landing page</h3> -->
+          </div>
+          <div class="pp-body">
+            <!-- <div class="description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                culpa, voluptatibus quae dolorum laborum facere necessitatibus
+                adipisci. Excepturi doloremque iure id nisi minus doloribus
+                velit error dicta illo esse beatae optio quae illum, magnam
+                aliquam neque perferendis, ullam incidunt omnis!
+              </p>
+            </div> -->
+            <!-- <div class="general-info">
+              <ul>
+                <li>Created - <span>4 Dec 2022</span></li>
+                <li>technology used - <span>Html,Css</span></li>
+                <li>role - <span>Frontend</span></li>
+                <li>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Item Details Popup End -->
 
     <script src="./src/js/index.js"></script>
   </body>
